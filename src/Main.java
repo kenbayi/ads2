@@ -5,10 +5,10 @@ public class Main {
         MyArrayList<Object> myList = new MyArrayList<>();
 
         // Adding elements to the list
-        myList.add(10);
-        myList.add(20);
-        myList.add(30);
         myList.add(40);
+        myList.add(30);
+        myList.add(20);
+        myList.add(10);
         myList.add(50);
         myList.add(99);
 
@@ -69,8 +69,13 @@ public class Main {
         // Testing exists
         System.out.println("\nDoes 50 exist in the list? " + myList.exists(50));
 
+        // Testing sort
+        System.out.println("\nSorting list");
+        myList.sort();
+        myList.printArr();
+
         // Testing toArray()
-        System.out.println("\nConverting list to array:");
+        System.out.println("Converting list to array:");
         Object[] array = myList.toArray();
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");

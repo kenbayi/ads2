@@ -123,10 +123,18 @@ public class MyArrayList<T> implements MyList<T> {
         remove(size - 1);
     }
 
-    // Method to sort the list
+    // Method to sort the list(bubble sort)
     @Override
     public void sort() {
-        // Not implemented
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (((Comparable<T>) arr[j]).compareTo(arr[j + 1]) > 0) {
+                    T temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
     }
 
     // Method to get the index of the first occurrence of an element
