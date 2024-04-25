@@ -221,17 +221,42 @@ public class Main {
         stack.push(5);
 
         // Test peek method
-        System.out.println("\nTop element of the stack: " + stack.peek());
+        System.out.println("Top element of the stack: " + stack.peek());
 
         // Test pop method
-        System.out.println("\nPopped element: " + stack.pop());
-        System.out.println("\nPopped element: " + stack.pop());
+        System.out.println("Popped element: " + stack.pop());
+        System.out.println("Popped element: " + stack.pop());
 
         // Test size method
-        System.out.println("\nSize of the stack: " + stack.size());
+        System.out.println("Size of the stack: " + stack.size());
 
         // Test isEmpty method again
-        System.out.println("\nIs stack empty? " + stack.isEmpty());
+        System.out.println("Is stack empty? " + stack.isEmpty());
+
+
+        // Create a new queue
+        MyQueue<Object> queue = new MyQueue<>();
+
+        // Test isEmpty method
+        System.out.println("\nIs queue empty? " + queue.isEmpty());
+
+        // Test enqueue method
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+
+        // Test peek method
+        System.out.println("Front element of the queue: " + queue.peek());
+
+        // Test dequeue method
+        System.out.println("Dequeued element: " + queue.dequeue());
+        System.out.println("Dequeued element: " + queue.dequeue());
+
+        // Test size method
+        System.out.println("Size of the queue: " + queue.size());
+
+        // Test isEmpty method again
+        System.out.println("Is queue empty? " + queue.isEmpty());
 
     }
 
