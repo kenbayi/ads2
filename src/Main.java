@@ -258,6 +258,39 @@ public class Main {
         // Test isEmpty method again
         System.out.println("Is queue empty? " + queue.isEmpty());
 
+        // Create a new min heap
+        MyMinHeap<Integer> minHeap = new MyMinHeap<>();
+
+        // Test isEmpty method
+        System.out.println("\nIs heap empty? " + minHeap.isEmpty());
+
+        // Test insert method
+        System.out.println("Adding elements...");
+        minHeap.insert(4);
+        minHeap.insert(2);
+        minHeap.insert(7);
+        System.out.println("After adding 4, 2, 7: ");
+        minHeap.printArr();
+        minHeap.insert(1);
+        minHeap.insert(8);
+        System.out.println("After adding 1, 8: ");
+        minHeap.printArr();
+
+        // Test getMin method
+        System.out.println("Minimum element in the heap: " + minHeap.getMin());
+
+        // Test extractMin method
+        System.out.println("Minimum element removed: " + minHeap.extractMin());
+        minHeap.printArr();
+
+        // after extracting min
+        System.out.println("Minimum element in the heap: " + minHeap.getMin());
+
+        // Test size method
+        System.out.println("Size of the heap: " + minHeap.size());
+
+        // Test isEmpty method again
+        System.out.println("Is heap empty? " + minHeap.isEmpty());
     }
 
 }
