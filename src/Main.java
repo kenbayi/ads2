@@ -3,7 +3,6 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
         MyArrayList<Object> myList = new MyArrayList<>();
-
         // Adding elements to the list
         myList.add(40);
         myList.add(30);
@@ -209,6 +208,31 @@ public class Main {
         while (iterLinked.hasNext()) {
             System.out.print(iterLinked.next() + " ");
         }
+        System.out.println(" ");
+        // Create a new stack
+        MyStack<Object> stack = new MyStack<>();
+
+        // Test isEmpty method
+        System.out.println("\nIs stack empty? " + stack.isEmpty()); // Output: true
+
+        // Test push method
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        // Test peek method
+        System.out.println("\nTop element of the stack: " + stack.peek());
+
+        // Test pop method
+        System.out.println("\nPopped element: " + stack.pop());
+        System.out.println("\nPopped element: " + stack.pop());
+
+        // Test size method
+        System.out.println("\nSize of the stack: " + stack.size());
+
+        // Test isEmpty method again
+        System.out.println("\nIs stack empty? " + stack.isEmpty());
+
     }
 
 }
